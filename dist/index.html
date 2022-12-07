@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.min.css">
-    <script src="./js/main.min.js" defer></script>
     <title>casino</title>
 </head>
 
@@ -18,6 +17,11 @@
         </div>
     </div>
     <div class="main">
+        <div class="numberOfAttempts">
+            <div class="numberOfAttempts__wrapp">
+                <img class="numberOfAttempts__img" src="./images/numberOfAttempts.png" alt="">
+            </div>
+        </div>
         <div class="you-winn__inner">
             <img class="you-winn" src="./images/you-winn.png" alt="">
 
@@ -33,86 +37,88 @@
                 <img class="imageSlot imageSlot2" src="./images/slot-layer2.PNG" alt="">
                 <img class="imageSlot imageSlot3" src="./images/slot-layer3.PNG" alt="">
                 <img class="imageSlot imageSlot4" src="./images/slot-layer4.PNG" alt="">
-                <div class="top">
-                    <div class="automat__item top__item">
-                        <div class="tern one">
-                            <span class="front allside"><img class="allside__img" src="./images/elem8.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem2.PNG"
-                                    alt="element"></span>
+                <div class="automat__items">
+                    <canvas id="canvas"></canvas>
+                    <div class="top">
+                        <div class="automat__item top__item">
+                            <div class="tern one">
+                                <span class="front allside"><img class="allside__img" src="./images/elem8.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem2.PNG"
+                                        alt="element"></span>
+                            </div>
+                        </div>
+                        <div class="automat__item top__item">
+                            <div class="tern two">
+                                <span class="front allside"><img class="allside__img" src="./images/elem8.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem4.PNG"
+                                        alt="element"></span>
+                            </div>
+                        </div>
+                        <div class="automat__item top__item">
+                            <div class="tern three">
+                                <span class="front allside"><img class="allside__img" src="./images/elem5.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem6.PNG"
+                                        alt="element"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="automat__item top__item">
-                        <div class="tern two">
-                            <span class="front allside"><img class="allside__img" src="./images/elem8.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem4.PNG"
-                                    alt="element"></span>
-                        </div>
-                    </div>
-                    <div class="automat__item top__item">
-                        <div class="tern three">
-                            <span class="front allside"><img class="allside__img" src="./images/elem5.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem6.PNG"
-                                    alt="element"></span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="center">
-                    <div class="automat__item center__item">
-                        <div class="tern one">
-                            <span class="front allside"><img class="allside__img" src="./images/elem5.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem2.PNG"
-                                    alt="element"></span>
+                    <div class="center">
+                        <div class="automat__item center__item">
+                            <div class="tern one">
+                                <span class="front allside"><img class="allside__img" src="./images/elem5.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem2.PNG"
+                                        alt="element"></span>
+                            </div>
+                        </div>
+                        <div class="automat__item center__item">
+                            <div class="tern two">
+                                <span class="front allside"><img class="allside__img" src="./images/elem3.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem1.PNG"
+                                        alt="element"></span>
+                            </div>
+                        </div>
+                        <div class="automat__item center__item">
+                            <div class="tern three">
+                                <span class="front allside"><img class="allside__img" src="./images/elem7.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem7.PNG"
+                                        alt="element"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="automat__item center__item">
-                        <div class="tern two">
-                            <span class="front allside"><img class="allside__img" src="./images/elem3.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem1.PNG"
-                                    alt="element"></span>
+                    <div class="bottom">
+                        <div class="automat__item bottom__item">
+                            <div class="tern one">
+                                <span class="front allside"><img class="allside__img" src="./images/elem7.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem6.PNG"
+                                        alt="element"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="automat__item center__item">
-                        <div class="tern three">
-                            <span class="front allside"><img class="allside__img" src="./images/elem7.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem7.PNG"
-                                    alt="element"></span>
+                        <div class="automat__item bottom__item">
+                            <div class="tern two">
+                                <span class="front allside"><img class="allside__img" src="./images/elem2.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem5.PNG"
+                                        alt="element"></span>
+                            </div>
+                        </div>
+                        <div class="automat__item bottom__item">
+                            <div class="tern three">
+                                <span class="front allside"><img class="allside__img" src="./images/elem1.PNG"
+                                        alt="element"></span>
+                                <span class="back allside"><img class="allside__img" src="./images/elem3.PNG"
+                                        alt="element"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bottom">
-                    <div class="automat__item bottom__item">
-                        <div class="tern one">
-                            <span class="front allside"><img class="allside__img" src="./images/elem7.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem6.PNG"
-                                    alt="element"></span>
-                        </div>
-                    </div>
-                    <div class="automat__item bottom__item">
-                        <div class="tern two">
-                            <span class="front allside"><img class="allside__img" src="./images/elem2.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem5.PNG"
-                                    alt="element"></span>
-                        </div>
-                    </div>
-                    <div class="automat__item bottom__item">
-                        <div class="tern three">
-                            <span class="front allside"><img class="allside__img" src="./images/elem1.PNG"
-                                    alt="element"></span>
-                            <span class="back allside"><img class="allside__img" src="./images/elem3.PNG"
-                                    alt="element"></span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <div id="wrap-btn">
                 <img id="start" src="./images/spin.png" alt="">
@@ -125,6 +131,8 @@
         <img class="bg__chinese" src="./images/chinese-fire-vertical.PNG" alt="">
         <img class="bg__chinese bg__chinese-small" src="./images/chinese-fire-vertical.PNG" alt="">
     </div>
+
+    <script src="./js/main.min.js"></script>
 </body>
 
 </html>
